@@ -16,10 +16,8 @@ export default function PostDetail() {
 	const [comment, setComment] = useState('');
 	const [post, setPost] = useState({});
 	useEffect(() => {
-		let unsubscribe;
 		if (id) {
-			unsubscribe = db
-				.collection('posts')
+			db.collection('posts')
 				.doc(id)
 				.collection('comments')
 				.onSnapshot(snapshot => {
@@ -28,7 +26,7 @@ export default function PostDetail() {
 				});
 			console.log(comments);
 		}
-	}, []);
+	}, [comments, id]);
 	const PostComment = e => {
 		e.preventDefault();
 		if (comment) {
@@ -45,7 +43,6 @@ export default function PostDetail() {
 		} else console.log('Bạn chưa nhập comment');
 	};
 	useEffect(() => {
-		let unsubscribe;
 		if (id) {
 			db.collection('posts')
 				.doc(id)
@@ -54,7 +51,7 @@ export default function PostDetail() {
 
 			console.log(post);
 		}
-	}, []);
+	}, [id, post]);
 	return (
 		<div className='postDetailWrapper container'>
 			<div className='userInfo'>
