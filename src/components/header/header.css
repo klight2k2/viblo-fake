@@ -87,3 +87,12 @@
 .headerLoginLink:hover {
 	opacity: 0.7;
 }
+
+.signInlogo {
+	height: 50px;
+}
+
+.signIn {
+	display: flex;
+	flex-direction: column;
+}

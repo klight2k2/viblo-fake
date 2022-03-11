@@ -113,12 +113,12 @@ export default function Header() {
 					<Box sx={modalStyle}>
 						<center>
 							<img
-								className='app__headerImage'
-								src='https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png'
+								className='signInlogo'
+								src='https://viblo.asia/logo_full.svg'
 								alt=''
 							/>
 						</center>
-						<form action='' className='app__signup'>
+						<form action='' className='signIn'>
 							<Input
 								placeholder='username'
 								type='text'
@@ -152,12 +152,12 @@ export default function Header() {
 					<Box sx={modalStyle}>
 						<center>
 							<img
-								className='app__headerImage'
-								src='https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png'
+								className='signInlogo'
+								src='https://viblo.asia/logo_full.svg'
 								alt=''
 							/>
 						</center>
-						<form action='' className='app__signup'>
+						<form action='' className='signIn'>
 							<Input
 								placeholder='email'
 								type='email'
