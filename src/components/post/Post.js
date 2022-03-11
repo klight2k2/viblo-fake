@@ -1,6 +1,8 @@
 import './post.css';
 
 export default function Post({ post }) {
+
+	
 	return (
 		<div className='postItem'>
 			<img

@@ -28,7 +28,6 @@ export default function PostDetail() {
 				});
 			console.log(comments);
 		}
-		return () => unsubscribe();
 	}, []);
 	const PostComment = e => {
 		e.preventDefault();
@@ -55,7 +54,6 @@ export default function PostDetail() {
 
 			console.log(post);
 		}
-		return unsubscribe();
 	}, []);
 	return (
 		<div className='postDetailWrapper container'>

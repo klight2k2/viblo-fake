@@ -1,6 +1,9 @@
 import './navbar.css';
-
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import UserContext from './../../UserContext';
 export default function Navbar() {
+	const { user } = useContext(UserContext);
 	return (
 		<div className='navbarWrapper'>
 			<div className='banner'>
@@ -43,6 +46,12 @@ export default function Navbar() {
 						<div className='line'></div>
 					</li>
 				</ul>
+
+				{user ? (
+					<Link to='/create'> Tạo bài viết</Link>
+				) : (
+					<div></div>
+				)}
 			</div>
 			<div className='navbarJoin'>
 				<a
